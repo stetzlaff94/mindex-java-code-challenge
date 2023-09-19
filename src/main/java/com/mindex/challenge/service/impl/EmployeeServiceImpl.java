@@ -5,21 +5,20 @@ import com.mindex.challenge.data.Employee;
 import com.mindex.challenge.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
-public class DefaultEmployeeService implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeRepository employeeRepository;
 
-    public DefaultEmployeeService(EmployeeRepository employeeRepository) {
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
-    private static final Logger LOG = LoggerFactory.getLogger(DefaultEmployeeService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
     @Override
     public Employee create(Employee employee) {

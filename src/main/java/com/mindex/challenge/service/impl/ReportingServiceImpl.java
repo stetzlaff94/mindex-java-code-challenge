@@ -14,12 +14,12 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
-public class DefaultReportingService implements ReportingService {
+public class ReportingServiceImpl implements ReportingService {
 
     // I am using constructor injection as that is the preferred method per Spring documentation.
     private final EmployeeRepository employeeRepository;
 
-    public DefaultReportingService(EmployeeRepository employeeRepository) {
+    public ReportingServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 

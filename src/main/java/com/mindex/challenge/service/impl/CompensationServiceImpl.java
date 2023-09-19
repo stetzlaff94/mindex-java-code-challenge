@@ -12,12 +12,12 @@ import org.springframework.web.server.ResponseStatusException;
 import java.time.LocalDate;
 
 @Service
-public class DefaultCompensationService implements CompensationService {
+public class CompensationServiceImpl implements CompensationService {
 
-    private final static Logger LOG = LoggerFactory.getLogger(DefaultCompensationService.class);
+    private final static Logger LOG = LoggerFactory.getLogger(CompensationServiceImpl.class);
     private CompensationRepository compensationRepository;
 
-    public DefaultCompensationService(CompensationRepository compensationRepository) {
+    public CompensationServiceImpl(CompensationRepository compensationRepository) {
         this.compensationRepository = compensationRepository;
     }
 
